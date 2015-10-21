@@ -1,0 +1,217 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Bichong}{Li}
+\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{Danling Street No.5, Haidian District, Beijing, China, 100080}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+86 15801062298}                   % optional, remove / comment the line if not wanted
+\phone[fixed]{+86 01059172704}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{libichong@gmail.com}                               % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Work Experience}
+
+\vspace{5pt}
+
+\subsection{Previous Employment}
+
+\vspace{5pt}
+
+\begin{itemize}
+
+\item{\cventry{Jul 2012 -- Now}{Software Development Engineer 2}{Microsoft}{Beijing}{}{\vspace{3pt}I work in Bing Multimedia Index Generation team. I am responsible for video processing pipeline system. In the past 3.5 years, the remarkable projects including: 
+\vspace{4pt}
+\begin{itemize}
+\item{Video Page Classifier, use html page content analysis and libsvm to train a classifer to distinguish video page and none video page. }
+\vspace{4pt}
+\item{Template Feature Extraction Pipeline v2, transform about 2000 sites from the existing regex matching templates to wrapstar models automatically and integrating them into video crawler.}
+\vspace{4pt}
+\item{BlueWhale Superfresh Video Processing Pipeline, implement video processing components in Bing baja platform with event processor, double the index size, decrease publish time from 1 hour to 5 minutes with 90\% coverage.}
+\vspace{4pt}
+\item{Thumbnail Repository, extract 30 key frames dumping from a video and compute 82 features with image understanding library, upload the features and key frames to cosmos and compress them into cosmos file. It is the biggest repository for thumbnails, image content features, storage platform including ~20B images and 4PB size. }
+\vspace{4pt}
+\item{Multimedia Repository v2, implement a storage platform to store the features with strong type support to benefit the cosmos stream serialization and deserialization. It decreased 29\% of the PN hours and 20\% storage size.}
+\vspace{4pt}
+\item{Video Feed Processing Pipeline v2, redesign the feed processing pipeline with more flexible components which double the discovery coverage.}
+\vspace{4pt}
+\item{Video Expiry Pipeline, detect video expiry by several methods and blocked them in 2 hours which is big improvement the video block latency.}
+\vspace{4pt}
+\end{itemize}
+Besides above, I fixed some tier-0 bugs,shipped some small but influential features and finished some useful and influential tool to help the others to use our video index.I work with 30+ verdors to guarantee the index quality.}}
+
+\vspace{6pt}
+
+\item{\cventry{Dec 2011 -- Jul 2012}{Intern}{Microsoft}{Beijing}{}{\vspace{3pt}I did some experiments to try some new methods to discover more videos. Tokenize the html content into variable words and use tf-idf to get the importance of a word to distinguish the video from huge web documents.I tried some random forest and svm to reach ~90\% precision and ~80\% recall finnally.}}
+
+\vspace{6pt}
+
+\item{\cventry{Apr 2010 -- Oct 2011}{Software Engineer Intern}{Jiangsu X Security Research Institute}{Jiangsu, Nanjing}{}{\vspace{3pt}I am responsible to develop some components of Windows Forensic System. These components including
+\begin{itemize}
+\item{Windows Regedit hive scanner, scan windows regedit in hive level to search some sensitive confidential information. }
+\vspace{4pt}
+\item{Web browser log scanner, scan and analysis IE, firefox, chrome browser log, bookmarks and extensions. }
+\vspace{4pt}
+\item{Anti-Virus software log scanner, scan the killing, isolation history by analysis the log file structure of some famous software.}
+\vspace{4pt}
+\item{Windows services scanner, scan windows driver list to search hidden windows services. }
+\vspace{4pt}
+\item{Forensic Communication Services: When the standalone clients finish detection process, the forensic result will be transfer to server, and then import to SQL Server. Implement ActiveX control, Send Client, Receiver Server by using ATL framework, IOCP technology.}
+\vspace{4pt}
+\end{itemize}}}
+
+\vspace{6pt}
+
+\item{\cventry{Janl 2009 -- Jun 2009}{Software Engineer}{Jiangsu Huazhao Information Co., Ltd}{Nanjing, Jiangsu}{}{\vspace{3pt}My work is to lead a team to implement a bidding client for medicine companies.}}
+
+\vspace{6pt}
+
+\item{\cventry{Jul 2008 -- Dec 2008}{Software Engineer}{Jiangsu GETO Information Technology Co., Ltd}{Nanjing, Jiangsu}{}{\vspace{3pt}My work is to develop some components of the ERP and OA custom softwares for the enterprises.}}
+
+\end{itemize}
+
+\vspace{2pt}
+
+\subsection{Microsoft Hackathon Projects}
+
+\begin{itemize}
+
+\item{\cventry{2015}{Beijing}{WeWatch}{}{}{\vspace{3pt} WeWatch provides a wide variety of emoticons, gifs and images for you to express feelings in a proactive, intelligent and simultaneous way while watching a video. Every time you start typing comments, emotional pictures will be automatically searched and matched and be displayed.}}
+
+\item{\cventry{2014}{Beijing}{BumbleBing, Second place in consumer category}{}{}{\vspace{3pt} BumbleBing empowers users to engage in chats with a collection of automatically suggested short video clips, based on the context. These short clips themselves are key excerpts of the most celebrated moments from top movies and TV shows, encompassing a wide range of emotions and unique moments.
+}}
+\item{\cventry{2013}{Beijing}{OneWeb}{}{}{\vspace{3pt} OneWeb is to provide the organized web page like a magazine paper by including wiki, image, video, discussion, comments.}}
+
+\item{\cventry{2012}{Beijing}{3DWorldNews}{}{}{\vspace{3pt} 3DWorldNews is to show the 3D earth by pining lots of news including image and video, you can  rotate. zoom to switch the news all round the world.}}
+
+\end{itemize}
+
+
+\vspace{5pt}
+
+\section{Education}
+
+\vspace{5pt}
+
+\subsection{Academic Qualifications}
+
+\vspace{5pt}
+
+\begin{itemize}
+
+\item{\cventry{2009--2011}{Computer Science and Technology}{Nanjing Normal University}{Nanjing, Jiangsu}{\textit{Master Degree}}{Thesis: \textit{Analysis and Detection of Winodws Nt6.x Rootkits.}}{}}
+
+\item{\cventry{2004--2008}{Electrical and Automation Engineering}{Nanjing Normal University}{Nanjing, Jiangsu}{\textit{Bachelor Degree}}{Thesis: \textit{Data Acquisition System Based on USB Interface.}}{}}
+
+\end{itemize}
+
+\vspace{2pt}
+
+\subsection{Awards and Honours}
+
+\vspace{5pt}
+
+\begin{tabular}{lll}
+National Postgraduate Mathematical Modelling Contest $\quad$ & Second Prize $\quad$ & 2011\\
+American Mathematical Modelling Contest $\quad$ & Honourable Mentions $\quad$ & 2008\\
+Nanjing Normal University Mathematical Modelling Contest $\quad$ & First Prize $\quad$ & 2007\\
+Nanjing Normal University Volunteering Teacher $\quad$ & Best Individual Prize $\quad$ & 2005 \\
+Nanjing Normal University Debating Competition $\quad$ & Second Prize $\quad$ & 2004
+\end{tabular}
+
+\section{Technical and Personal skills}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item \textbf{Basic Programming Skills:} Proficient in: Linux BASH Shell, MATLAB, Batch Scripts, Emacs, Python, Powershell. LATEX
+
+\vspace{6pt}
+
+\item \textbf{Professional Programming Skills:} Windows Driver FrameWork/BOOST/STL, C/C++/C\#, SQL/SCOPE, ASP.NET/PHP/JavaScript/CSS/JQery, WinDBG/Visual Studio/IDA
+
+\vspace{6pt}
+
+\item \textbf{General Business Skills:} Good presentation skills, Works well in a team.
+
+\end{itemize}
+
+\section{Other Experience}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item{To be a Volunteer Teacher in Caohou Village Primary School, Nanjing, Jiangsu. From Sep 2005 to Jun 2006}
+
+\vspace{6pt}
+
+\item{To be an engineer assitant of Prof.Wang Qiong to develop the Adhesive Dispenser II software by using the Visual Basic module based on Motion Control Card MPC02. From Sep 2006 to Dec 2006. }
+
+\end{itemize}
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
